@@ -1,9 +1,12 @@
 import styled from "styled-components"
-export const PopulaStyle = ({ img, text1,text2, mark }) => {
+export const PopulaStyle = ({ img, text1, text2, mark }) => {
 
-const Container = styled.div`
+
+
+  const Container = styled.div`
     //position: absolute;
-width: 450px;
+ width: 450px;
+ 
 .image {
   opacity: 1;
   display: block;
@@ -46,21 +49,51 @@ width: 450px;
   padding-top: 3px;
   
 }
+.mark{
+  width: 60px;
+  height: 20px;
+  position: relative;
+  top:-450px;
+  color: white;
+  text-align: center;
+  //background-color: black;
+}
     
 `
-    return (
-        <Container>
-            <div class="container">
-                <img src={img}  alt="Avatar" class="image"/>
-                    <div class="middle">
-                        <div class="text">
-                          <div>{text1}</div>
-                          <div>{text2}</div>
-                        </div>
-                    </div>
-            </div>
-        </Container>
+  function myFunction123() 
+  {
+    if (mark==="Hot")
+    {
+    document.getElementsByClassName('mark')[0].style.backgroundColor = "#ff0000";
+  }
+  if (mark==="Sale")
+    {
+    document.getElementsByClassName('mark')[0].style.backgroundColor = "#000000";
+  }
+  }
+  
+
+  return (
+    <Container>
 
 
-    )
+      <div class="container" onLoad={myFunction123}>
+        <img src={img} alt="Avatar" class="image" />
+        <div class="middle">
+          <div class="text">
+            <div>{text1}</div>
+            <div>{text2}</div>
+          </div>
+        </div>
+        <div className="mark">
+          {mark}
+          {/* <button onClick={myFunction123}>123</button> */}
+        </div>
+      </div>
+    </Container>
+  );
+  
+  
 }
+
+

@@ -478,7 +478,7 @@ const Home = () => {
                             </p>
                         </div>
                         <div>
-                            <PopulaStyle img={Popularimg1} text1="Manto" text2="86 Product"></PopulaStyle>
+                            <PopulaStyle img={Popularimg1} text1="Manto" mark={"Hot"} text2="86 Product"></PopulaStyle>
                         </div>
 
                         <div class="abc">
