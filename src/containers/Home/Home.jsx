@@ -13,6 +13,13 @@ import Bannerimg from "assets/Banner.svg";
 import Logo from "assets/Logo.svg";
 import Igimg from "components/Igimg";
 import Igimage from 'assets/igimg.png'
+import pscard1 from 'assets/pscard1.svg';
+import pscard2 from 'assets/03.svg';
+import pscard3 from 'assets/pscard3.svg';
+import pscard4 from 'assets/pscard4.svg';
+
+
+
 
 
 
@@ -194,7 +201,7 @@ const PopularStyles1 = styled.div`
 
 `
 const PopularStyles = styled.div`
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 600px) {
   .abc{ display:none }
 }
 
@@ -230,9 +237,9 @@ p{
 }
 `
 const Filtertxt = styled.div`
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 600px) {
   .def{ display:flex,
-    flex-direction: column,   }
+       }
 }
 
     width: 100%;
@@ -484,16 +491,16 @@ const Home = () => {
                         <div class="abc">
                             <PopularProduct>
                                 <div>
-                                    <PopulaStyle2 img={Popularimg1} text1="Manto" text2="86 Product"></PopulaStyle2>
+                                    <PopulaStyle2 img={pscard1} text1="Manto" mark1= {"Hot"} text2="86 Product"></PopulaStyle2>
                                 </div>
                                 <div>
-                                    <PopulaStyle2 img={Popularimg1} text1="Manto" text2="86 Product"></PopulaStyle2>
+                                    <PopulaStyle2 img={pscard2} text1="Manto" mark1= {"Sale"} text2="86 Product"></PopulaStyle2>
                                 </div>
                                 <div>
-                                    <PopulaStyle2 img={Popularimg1} text1="Manto" text2="86 Product"></PopulaStyle2>
+                                    <PopulaStyle2 img={pscard3} text1="Manto" mark1= {"Hot"}  text2="86 Product"></PopulaStyle2>
                                 </div>
                                 <div>
-                                    <PopulaStyle2 img={Popularimg1} text1="Manto" text2="86 Product"></PopulaStyle2>
+                                    <PopulaStyle2 img={pscard4} text1="Manto" text2="86 Product"></PopulaStyle2>
                                 </div>
 
                             </PopularProduct>

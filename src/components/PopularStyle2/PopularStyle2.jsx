@@ -1,7 +1,7 @@
 import styled from "styled-components"
-export const PopulaStyle2 = ({ img, text1,text2, mark }) => {
+export const PopulaStyle2 = ({ img, text1, text2, mark1 }) => {
 
-    const Container = styled.div`
+  const Container = styled.div`
     //position: absolute;
     width: 210px;
     height: 210px;
@@ -47,19 +47,67 @@ export const PopulaStyle2 = ({ img, text1,text2, mark }) => {
   padding-top: 3px;
   
 }
+.mark1{
+  width: 60px;
+  height: 20px;
+  position: relative;
+  top:-200px;
+  color: white;
+  text-align: center;
+  //background-color: black;
+  
+}
     
 `
-    return (
-        <Container>
-          <img src={img}  alt="Avatar" class="image"/>
-              <div class="middle">
-                  <div class="text">
-                    <div>{text1}</div>
-                    <div>{text2}</div>
-                  </div>
-              </div>
-        </Container>
+  function myFunction12345() {
+    //console.log(document.getElementsByClassName('mark1'));
+    if (mark1 === "Hot") {
+      // document.getElementsByClassName('mark1')[0].style.backgroundColor = "#ff0000";
+      // document.getElementsByClassName('mark1')[1].style.backgroundColor = "#ff0000";
+      // document.getElementsByClassName('mark1')[2].style.backgroundColor = "#ff0000";
+      // document.getElementsByClassName('mark1')[3].style.backgroundColor = "#ff0000";
+      // document.getElementsByClassName('mark1')[4].style.backgroundColor = "#ff0000";
+      var i ;
+      var elements = document.getElementsByClassName('mark1');
+      
+      elements[i].style.backgroundColor = "#ff0000";
+      // for (var i = 0; i < elements.length; i++) {
+      //   elements[i].style.backgroundColor = "#ff0000";
+      // }
+
+    }
+    if (mark1 === "Sale") {
+      // document.getElementsByClassName('mark1')[0].style.backgroundColor = "#000000";
+      // document.getElementsByClassName('mark1')[1].style.backgroundColor = "#000000";
+      // document.getElementsByClassName('mark1')[2].style.backgroundColor = "#000000";
+      // document.getElementsByClassName('mark1')[3].style.backgroundColor = "#000000";
+      // document.getElementsByClassName('mark1')[4].style.backgroundColor = "#000000";
+      var elements = document.getElementsByClassName('mark1');
+      for (var i = 0; i < elements.length; i++) {
+        elements[i].style.backgroundColor = "#000000";
+      }
+    }
+  }
+  return (
+    <Container>
+      <div onLoad={myFunction12345}>
+        <img src={img} alt="Avatar" class="image" />
+        <div class="middle">
+          <div class="text">
+            <div>{text1}</div>
+            <div>{text2}</div>
+
+          </div>
+
+        </div>
+      </div>
+      <div className="mark1">
+        {mark1}
+      </div>
+
+    </Container>
 
 
-    )
+
+  )
 }
